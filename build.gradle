@@ -19,7 +19,7 @@ dependencies {
 
     //Security
     implementation 'org.springframework.boot:spring-boot-starter-security:2.6.3'
-    implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server:5.4.6'
+    implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server:2.6.4'
 
     //Database
     implementation 'org.postgresql:postgresql:42.2.24'
