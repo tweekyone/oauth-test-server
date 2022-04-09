@@ -1,11 +1,13 @@
 package ru.tweekyone.resourceserver.config.util;
 
+import lombok.AllArgsConstructor;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 
+@AllArgsConstructor
 public class JwtAuthenticationToken implements Authentication {
     private UserDetails userDetails;
     private String jwtToken;
