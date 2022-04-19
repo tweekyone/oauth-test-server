@@ -67,9 +67,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         return new BCryptPasswordEncoder();
     }
 
+
+    @Override
     @Bean
-    public AuthenticationManager getAuthenticationManager() throws Exception {
-        return super.authenticationManager();
+    public AuthenticationManager authenticationManagerBean() throws Exception {
+        return super.authenticationManagerBean();
     }
 
     @Bean
@@ -79,7 +81,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Bean
     public JwtLoginAuthenticationFilter getJwtLoginAuthenticationFilter() throws Exception {
-        return new JwtLoginAuthenticationFilter(LOGIN_URL, getAuthenticationManager());
+        return new JwtLoginAuthenticationFilter(LOGIN_URL, authenticationManagerBean());
     }
 
     @Bean

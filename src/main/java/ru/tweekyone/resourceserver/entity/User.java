@@ -29,7 +29,7 @@ public class User {
     @Column(name = "is_enabled")
     private boolean isEnabled;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "role_id")
     private Role role;
 }
